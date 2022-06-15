@@ -78,4 +78,16 @@ describe("Pruebas en componente de listado de clientes", () => {
     expect(rowsContainerLength).toBe(1);
     });
 
+  test('Debe traer todos los registros al no mandar un valor en el input', () => {
+
+    fireEvent.change(screen.getByLabelText(/filtrar por documento/i), {
+        target: { value: "" },
+    });
+    fireEvent.click(screen.getByTestId("btn-search"));
+    
+    // eslint-disable-next-line testing-library/no-node-access
+    const rowsContainerLength = screen.getByTestId('table-pacientes').children.length;
+    expect(rowsContainerLength).toBe(5);
+    });
+
 });
