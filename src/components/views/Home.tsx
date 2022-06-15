@@ -74,7 +74,7 @@ const Home = () => {
           id="name"
           label="Nombre"
           margin="dense"
-          onChange={(e) => handleOnChange(e)}
+          onChange={(e) => handleOnChange(e.target)}
           variant="outlined"
           value={form.name}
         />
@@ -83,7 +83,7 @@ const Home = () => {
           id="docId"
           label="Documento"
           margin="dense"
-          onChange={(e) => handleOnChange(e)}
+          onChange={(e) => handleOnChange(e.target)}
           value={form.docId}
           variant="outlined"
         />
@@ -92,7 +92,7 @@ const Home = () => {
           id="sugar"
           label="Porcentaje de azúcar"
           margin="dense"
-          onChange={(e) => handleOnChange(e)}
+          onChange={(e) => handleOnChange(e.target)}
           type={"number"}
           variant="outlined"
           value={form.sugar}
@@ -103,7 +103,7 @@ const Home = () => {
           id="fat"
           label="Porcentaje de grasa"
           margin="dense"
-          onChange={(e) => handleOnChange(e)}
+          onChange={(e) => handleOnChange(e.target)}
           type={"number"}
           variant="outlined"
           value={form.fat}
@@ -113,7 +113,7 @@ const Home = () => {
           id="oxygen"
           label="Porcentaje de oxígeno"
           margin="dense"
-          onChange={(e) => handleOnChange(e)}
+          onChange={(e) => handleOnChange(e.target)}
           type={"number"}
           variant="outlined"
           value={form.oxygen}

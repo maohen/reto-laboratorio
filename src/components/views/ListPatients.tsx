@@ -39,7 +39,7 @@ const ListPatients = () => {
             id="field"
             label="Filtrar por documento"
             margin="dense"
-            onChange={(e) => handleOnChange(e)}
+            onChange={(e) => handleOnChange(e.target)}
             sx={{padding: "5px"}}
             variant="outlined"
             value={form.field}

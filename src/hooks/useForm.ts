@@ -1,10 +1,10 @@
-import { ChangeEvent, useState } from "react";
+import { useState } from "react";
 
 export const useForm = <T>(initState: T) =>{
     const [formData, setFormData] = useState(initState);
     
-    const handleOnChange = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({ ...formData, [event.target.id]: event.target.value });
+    const handleOnChange = (target:any) => {
+    setFormData({ ...formData, [target.id]: target.value });
     };
 
     const resetForm = () => {
