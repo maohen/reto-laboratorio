@@ -1,46 +1,47 @@
-# Getting Started with Create React App
+Reto técnico - -Laboratorio APP
+===============
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Is developed using:
 
-## Available Scripts
+* React js
+* Typescript
+* Material UI
+* Styled components
+* React Router Dom
+* Axios
 
-In the project directory, you can run:
+Installation and basic usage
+----------------------------
 
-### `npm start`
+To start using this setup you need to clone locally the repository, and install all node.js dependencies, in the project directory, you can run:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+npm start
+-----
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Runs the app in the development mode.
+Open http://localhost:3000 to view it in the browser.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+npm run build
+-----
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
+Builds the app for production to the build folder.
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+npm test
+-----
+Launches the test runner in the interactive watch mode.
+See the section about running tests for more information.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+-----
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+##  Documentation of use
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **Navigation menu**: contains the routes of the app, the user's ip is shown in the menu.
+- **Home:** 
+Form to add data per patient. Name, document, fat, sugar and oxygen level fields with valid values between 0-100 are required.
+The save button validates the fields and if they are not complete the respective error message is displayed, if they are valid it displays the message corresponding to the level of health regarding the level of fat, sugar and oxygen, the information is saved in the browser's db to be consulted in the patient consultation module.
+- **Consult patients:** 
+When loading the module, the information of all the patients that have been added is displayed in the table (this information is found in the browser's db).
+The search button filters for matches between the document added in the filter field and the database. If blank, it will fetch all records.
