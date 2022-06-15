@@ -58,7 +58,7 @@ export const Li = styled('li')({
       marginTop: "3px",
       position: "absolute",
       transition: "all .4s ease-out",
-      width: "90%"
+      width: "100%"
     },
     "& .nav-active::after":{
       content: '""',
@@ -68,6 +68,6 @@ export const Li = styled('li')({
       marginTop: "3px",
       position: "absolute",
       transition: "all .4s ease-out",
-      width: "90%"
+      width: "100%"
     },
   });

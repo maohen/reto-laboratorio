@@ -18,7 +18,7 @@ import { GET_IP } from "../api";
 
 const RouterMain = () => {
 
-  const [ip, setIp] = useState("");
+  const [ip, setIp] = useState();
 
   useEffect(() => {
     loadDataIp(GET_IP).then(data=>{
@@ -32,7 +32,6 @@ const RouterMain = () => {
         container
         spacing={2}
         direction="row"
-        //className={classes.headerSingleGroups}
       >
         <Grid item xs={12} sm={5} md={3}>
             <Nav>

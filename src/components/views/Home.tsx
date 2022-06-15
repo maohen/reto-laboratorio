@@ -81,7 +81,7 @@ const Home = () => {
         <TextField
           color="primary"
           id="docId"
-          label="Cedula"
+          label="Documento"
           margin="dense"
           onChange={(e) => handleOnChange(e)}
           value={form.docId}
@@ -99,6 +99,7 @@ const Home = () => {
         />
         <TextField
           color="primary"
+          data-testid="input-fat"
           id="fat"
           label="Porcentaje de grasa"
           margin="dense"
@@ -120,16 +121,16 @@ const Home = () => {
       </Box>
 
       {msgError.length > 0 && 
-        <Text color={"red"} marginLeft={"10px"}>{msgError}</Text>
+        <Text color={"red"} marginLeft={"10px"} data-testid="msg-error">{msgError}</Text>
       }
       {resultDiagnosis.length > 0 && (
-        <Text color={"#1a76d2"} marginRight={"10px"} marginLeft={"10px"}>
+        <Text color={"#1a76d2"} marginRight={"10px"} marginLeft={"10px"} data-testid="msg-diagnostico">
           {resultDiagnosis}
         </Text>
       )}
 
       <Row>
-        <Btn variant="contained" onClick={handleSubmit}>
+        <Btn variant="contained" onClick={handleSubmit} data-testid="btn-guardar">
           Guardar
         </Btn>
         <Btn variant="contained" onClick={resetForm}>Limpiar</Btn>

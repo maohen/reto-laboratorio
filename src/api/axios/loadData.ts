@@ -6,7 +6,6 @@ export const loadDataIp = async (uri:string) => {
         const data = await result.data;
         return data;
     } catch (error) {
-        console.log('Error consumiendo el servicio de obtener IP por => ', error);  
         return 'Error de conexion'
     }
   };

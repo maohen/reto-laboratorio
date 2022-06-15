@@ -44,7 +44,7 @@ const ListPatients = () => {
             variant="outlined"
             value={form.field}
           />
-          <Btn variant="contained" onClick={handleFilter} >Buscar</Btn>
+          <Btn variant="contained" onClick={handleFilter} data-testid="btn-search">Buscar</Btn>
 
       </Box>
       <TableContainer component={Paper}>
@@ -59,7 +59,7 @@ const ListPatients = () => {
               <TableCell align="right">Riego</TableCell>
             </TableRow>
           </TableHead>
-          <TableBody>
+          <TableBody data-testid="table-pacientes">
             {users.map((row) => (
               <TableRow
                 key={row.docId}
